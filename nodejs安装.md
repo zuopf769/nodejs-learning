@@ -19,11 +19,12 @@
 
 ### 二进制文件的部署安装（速度快，只需配置环境变量即可）
 
-   首先下载NodeJS的二进制文件，可以从[淘宝镜像](https://npm.taobao.org/mirrors/node) 下载相应版本即可
+   首先下载NodeJS的二进制文件，可以从[淘宝镜像](https://npm.taobao.org/mirrors/node) 下载相应版本即可。
 
-   下载后将安装包移动到要安装到的文件夹下，根据个人喜好设置即可。这里我放在了/home/kun/mysofltware/ 下面,依次执行如下命令，可看到
+   下载后将安装包到要安装到的文件夹下，根据个人喜好设置即可。这里我放在了/home/kun/mysofltware/ 下面,依次执行如下命令，可看到
    ```
    cd  /home/kun/mysofltware/
+   wget https://npm.taobao.org/mirrors/node/latest-v6.x/node-v6.1.0-linux-x64.tar.gz 
    ls
    ```
    ![](http://images.cnitblog.com/blog/171505/201402/210913034875851.png)
