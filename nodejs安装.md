@@ -26,6 +26,7 @@
    wget https://npm.taobao.org/mirrors/node/latest-v6.x/node-v6.1.0-linux-x64.tar.gz 
    ls
    ```
+   
    ![](http://images.cnitblog.com/blog/171505/201402/210913034875851.png)
    
    解压到当前文件夹下运行 
@@ -41,6 +42,7 @@
    ls
    ./node -v
    ```
+   
    
     ![](http://images.cnitblog.com/blog/171505/201402/210917347493824.png)
  
