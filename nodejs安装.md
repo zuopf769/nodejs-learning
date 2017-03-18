@@ -84,9 +84,11 @@
    ![](http://images.cnitblog.com/blog/171505/201402/210955566089122.png)
 
 
-  然后到任意目录下去执行一次执行node -v   npm -v 
-  ![]http://images.cnitblog.com/blog/171505/201402/210957049008387.png)
-   
+  然后到任意目录下去执行一次执行
+  ```
+  node -v   npm -v 
+  ```
+  ![](http://images.cnitblog.com/blog/171505/201402/210957049008387.png)
 
   ok 搞定了。
 
