@@ -40,7 +40,6 @@
    cd node-v0.10.26-linux-x64/bin
    ls
    ./node -v
-   
    ```
    
     ![](http://images.cnitblog.com/blog/171505/201402/210917347493824.png)
