@@ -41,6 +41,7 @@
    ls
    ./node -v
    ```
+   
     ![](http://images.cnitblog.com/blog/171505/201402/210917347493824.png)
  
     因为 /home/kun/mysofltware/node-v0.10.26-linux-x64/bin这个目录是不在环境变量中的，所以只能到该目录下才能node的程序。如果在其他的目录下执行node命令的话 ，必须通过绝对路径访问才可以的。
