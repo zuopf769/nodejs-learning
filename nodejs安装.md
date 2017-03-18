@@ -19,18 +19,22 @@
 1. 首先下载NodeJS的二进制文件，可以从[淘宝镜像](https://npm.taobao.org/mirrors/node) 下载相应版本即可
 
 2. 下载后将安装包移动到要安装到的文件夹下，根据个人喜好设置即可。这里我放在了/home/kun/mysofltware/ 下面,依次执行如下命令，可看到
+   ```
    cd  /home/kun/mysofltware/
    ls
+   ```
    ![](http://images.cnitblog.com/blog/171505/201402/210913034875851.png)
+   
    解压到当前文件夹下运行 
    tar zxvf node-v0.10.26-linux-x64.tar.gz
 
-
-进入 解压后的目录bin目录下，执行ls会看到两个文件node,npm. 然后执行./node -v ，如果显示出 版本号说明我们下载的程序包是没有问题的。 依次运行如下三条命令
-
-cd node-v0.10.26-linux-x64/bin
-ls
-./node -v
+   进入解压后的目录bin目录下，执行ls会看到两个文件node,npm. 然后执行./node -v ，如果显示出版本号说明我们下载的程序包是没有问题的。依次运行如下三条命令
+   ```
+   cd node-v0.10.26-linux-x64/bin
+   ls
+   ./node -v
+   
+   ```
  
 
 
