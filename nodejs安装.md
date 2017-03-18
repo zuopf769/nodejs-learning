@@ -1,6 +1,6 @@
 # linux 下部署nodejs（两种方式）
 
-> 今天在阿里云上部署nodejs，先采用了编译安装，居然把机器都搞挂了，io居高不下。
+> 今天在阿里云上部署nodejs，先采用了编译安装，居然把机器都搞挂了，io居高不下，cpu也打满。很多同学也在阿里云上部署nodejs，本人觉得第二种直接下载二进制文件解压、配置环境变量的方法挺简单的，详细方法参考下面。
 
 
 ## 关于在node在linux的部署我认为主要有三种方式，
@@ -46,60 +46,49 @@
 
 　　#### 软连接方式
 
-在终端执行echo $PATH可以获取PATH变量包含的内容，系统默认的PATH环境变量包括/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin: ，冒号为分隔符。所以我们可以将node和npm链接到/usr/local/bin 目录下如下执行
+    在终端执行echo $PATH可以获取PATH变量包含的内容，系统默认的PATH环境变量包括/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin: ，冒号为分隔符。所以我们可以将node和npm链接到/usr/local/bin 目录下如下执行
 
-1
-2
-ln -s /home/kun/mysofltware/node-v0.10.26-linux-x64/bin/node /usr/local/bin/node
-ln -s /home/kun/mysofltware/node-v0.10.26-linux-x64/bin/npm /usr/local/bin/npm
-　　通过如此，就可以访问Node了，同时node部署也已经完毕。
+   ```
+   ln -s /home/kun/mysofltware/node-v0.10.26-linux-x64/bin/node /usr/local/bin/node
+   ln -s /home/kun/mysofltware/node-v0.10.26-linux-x64/bin/npm /usr/local/bin/npm
+　 通过如此，就可以访问Node了，同时node部署也已经完毕。
+   ```
+ 
+   #### 环境变量配置。
+
+   在node目录下执行pwd 获取node所在的目录，要把这个目录添加到PATH环境变量
+   
+   ![](http://images.cnitblog.com/blog/171505/201402/210942078184920.png)
+
+   执行su 输入密码切换到root用户。
+
+   vi /etc/profile
+   
+   ![](http://images.cnitblog.com/blog/171505/201402/210949546957824.png)
+
+   在vi 环境下 点击 i 进入插入状态，在export PATH的上一行添加如下内容 (环境变量中的内容 是以冒号分割的)
+   PATH=$PATH:/home/kun/mysofltware/node-v0.10.26-linux-x64/bin
+ 
+   编辑完成后按Esc键 然后输入 :wq 按回车保存退出。
+   
+   ![](http://images.cnitblog.com/blog/171505/201402/210951040154734.png)
+
+   退出vi ，执行
+
+   source /etc/profile 可以是变量生效，
+
+   然后执行 echo $PATH ，看看输出内容是否包含自己添加的内容
+   ![](http://images.cnitblog.com/blog/171505/201402/210955566089122.png)
+
+
+  然后到任意目录下去执行一次执行node -v   npm -v 
+  ![]http://images.cnitblog.com/blog/171505/201402/210957049008387.png)
+   
+
+  ok 搞定了。
 
  
 
-环境变量配置。
-
-在node目录下执行pwd 获取node所在的目录，要把这个目录添加到PATH环境变量
-
-
-
-执行su 输入密码切换到root用户。
-
-vi /etc/profile
-
-
-(如果不熟悉vi的，centos还有个方便的类似记事本的东东。gedit执行gedit /etc/profile可以打开进行编辑）
-
-
-在vi 环境下 点击 i 进入插入状态，在export PATH的上一行添加如下内容 (环境变量中的内容 是以冒号分割的)
-PATH=$PATH:/home/kun/mysofltware/node-v0.10.26-linux-x64/bin
- 
-
-编辑完成后按Esc键 然后输入 :wq 按回车保存退出。
-
-
-
- 
-
- 
-
-退出vi ，执行
-
-source /etc/profile 可以是变量生效，
-
-然后执行 echo $PATH ，看看输出内容是否包含自己添加的内容
-
-
-
-然后到任意目录下去执行一次执行node -v   npm -v 
-
-
-
- 
-
-ok 搞定了。
-
- 
-
- 需要注意的是,在我的安装过程中，通过source /etc/profile，只是让变量临时生效了，如果此时我在开一个终端的 话运行node会提示找不到命令，这个问题 重启或者注销之后得到了解决，我记得之前玩Ubuntu的时候 是没有这个问题的。看来linux知识还是欠缺啊。
+  需要注意的是,在我的安装过程中，通过source /etc/profile，只是让变量临时生效了，如果此时我在开一个终端的 话运行node会提示找不到命令，这个问题 重启或者注销之后得到了解决，我记得之前玩Ubuntu的时候 是没有这个问题的。看来linux知识还是欠缺啊。
 
 
