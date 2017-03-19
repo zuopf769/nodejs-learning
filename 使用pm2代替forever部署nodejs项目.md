@@ -4,7 +4,7 @@
 # 简单教程
 
 
-首先需要安装pm2：
+#### 首先需要安装pm2：
 
 ```
 npm install -g pm2
@@ -21,23 +21,29 @@ pm2 start app.js
 ![](http://upload-images.jianshu.io/upload_images/31920-a87d9f022b1bad3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-pm2与forever相比较有哪些高大上的功能呢？我们看一下对比表格：
+#### pm2与forever相比较有哪些高大上的功能呢？
 
-Feature	|Forever	|PM2
-Keep Alive|	✔|	✔
-Coffeescript|	✔	|
-Log aggregation|	|	✔
-API		|✔|
-Terminal monitoring	||	✔
-Clustering		||✔
-JSON configuration	||	✔
+我们看一下对比表格：
+
+Feature	       |Forever	|  PM2|
+Keep Alive     |	✔     |	 ✔  |
+Coffeescript   |	✔	    |     |
+Log aggregation|	      |  ✔  |
+API		         |        |  ✔  |
+Terminal monitoring	|   |  ✔  |
+Clustering		|         |  ✔  |
+JSON configuration	|   |	✔   |
+
 我们可以很直观的看出，pm2相比较Forever，功能更加强大一些。
 
-查看运行状态
+
+#### 查看运行状态
 
 我们可以通过简单的命令查看应用的运行状态：
-
+```
 pm2 list
+```
+
 效果如下：
 
 
