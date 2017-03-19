@@ -3,16 +3,21 @@
 
 # 简单教程
 
-## 首先需要安装pm2：
+
+首先需要安装pm2：
+
 ```
 npm install -g pm2
-``
+```
 
 运行：
 
+```
 pm2 start app.js
-初次安装并运行，会有一个高大上的界面：
+```
 
+初次安装并运行，会有一个高大上的界面：
+![](http://upload-images.jianshu.io/upload_images/31920-a87d9f022b1bad3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 高大上的界面
 直接我们介绍过forever，那么pm2与forever相比较有哪些高大上的功能呢？我们看一下对比表格：
