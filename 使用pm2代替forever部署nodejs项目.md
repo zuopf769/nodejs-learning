@@ -17,19 +17,20 @@ pm2 start app.js
 ```
 
 初次安装并运行，会有一个高大上的界面：
+
 ![](http://upload-images.jianshu.io/upload_images/31920-a87d9f022b1bad3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-高大上的界面
-直接我们介绍过forever，那么pm2与forever相比较有哪些高大上的功能呢？我们看一下对比表格：
 
-Feature	Forever	PM2
-Keep Alive	✔	✔
-Coffeescript	✔	
-Log aggregation		✔
-API		✔
-Terminal monitoring		✔
-Clustering		✔
-JSON configuration		✔
+pm2与forever相比较有哪些高大上的功能呢？我们看一下对比表格：
+
+Feature	|Forever	|PM2
+Keep Alive|	✔|	✔
+Coffeescript|	✔	|
+Log aggregation|	|	✔
+API		|✔|
+Terminal monitoring	||	✔
+Clustering		||✔
+JSON configuration	||	✔
 我们可以很直观的看出，pm2相比较Forever，功能更加强大一些。
 
 查看运行状态
