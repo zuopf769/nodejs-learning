@@ -1,11 +1,11 @@
 
-[pm2官方文档](http://pm2.keymetrics.io/docs/usage/quick-start/)
+# 简单教程
 
-简单教程
-
-首先需要安装pm2：
-
+## 首先需要安装pm2：
+```
 npm install -g pm2
+``
+
 运行：
 
 pm2 start app.js
