@@ -147,4 +147,6 @@ One limitation of that example is that it assumes the user's value for
 #!/usr/bin/env -S-P/usr/local/bin:/usr/bin:${PATH} perl，那么它除了在这两个目录寻找之外，还会在PATH变量中定义的目录中寻找。
 ```
  
+ ### 4. 参考资料
  
+ + [LINUX上的SHEBANG符号(#!)](http://smilejay.com/2012/03/linux_shebang/)
