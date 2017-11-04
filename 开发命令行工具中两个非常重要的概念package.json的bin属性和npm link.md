@@ -1,9 +1,7 @@
 
 ## 背景
 
-在使用 Nodejs 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。在Node.js 中发现弄个命令行工具特别轻松，我来学习如何使用 Node.js 生成自己的command命令，在未来的项目中方便自己。
-
-但是本文是基础知识普及文章，着重讲解开发命令行工具中两个非常重要的概念package.json的bin属性和npm link。
+在使用 Nodejs 过程中，有很多包都支持全局安装，提供一个命令，然后在命令行我们就可以完成一些任务。有时候我们也需要开发这样的命令工具。在Node.js中开发命令行工具特别简单。本文是基础知识普及文章，着重讲解开发命令行工具中两个非常重要的概念package.json的bin属性和npm link。
 
 
 ## package.json的bin属性
@@ -79,12 +77,14 @@ npm link test 命令会去 $PREFIX/lib/node_modules 目录下查找名叫 test �
 
 再比如假设我们开发很多应用，每个应用都用到 Coffee-script ：
 
+```
 npm install coffee-script -g # 全局模式下安装coffee-script
 cd ~/work/node/test # 进入开发目录
 npm link coffee-script # 把全局模式的coffee-script模块链接到本地的node_modules下
 cd ../test-example # 进入另外的一个开发目录
 npm link coffee-script # 把全局模式的coffee-script模块链接到本地
 npm update coffee-script -g # 更新全局模式的coffee-script，所有link过去的项目同时更新了。
+```
 
 
 
